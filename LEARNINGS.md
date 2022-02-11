@@ -52,3 +52,11 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.4.1
 npm notice Run npm install -g npm@8.4.1 to update!
 npm notice
 ```
+
+---
+
+### 20220211
+
+- [ ] figure out `vitest/ui`
+- [ ] figure out why I am not getting typescript errors
+- [ ] investigate and resolve problems
