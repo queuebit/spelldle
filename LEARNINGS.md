@@ -1,3 +1,18 @@
+### 20220214
+
+---
+
+### 20220211
+
+- [x] figure out `vitest/ui`
+      `yarn test:ui --open`
+- [x] figure out why I am not getting typescript errors
+  - <https://code.visualstudio.com/docs/languages/typescript>
+- [x] investigate and resolve problems
+  - NOTE: problems seem to have gone away with `npm install -g typescript`
+
+---
+
 ### 20220210
 
 ```
@@ -52,14 +67,3 @@ npm notice Changelog: https://github.com/npm/cli/releases/tag/v8.4.1
 npm notice Run npm install -g npm@8.4.1 to update!
 npm notice
 ```
-
----
-
-### 20220211/20220214
-
-- [x] figure out `vitest/ui`
-      `yarn test:ui --open`
-- [x] figure out why I am not getting typescript errors
-  - <https://code.visualstudio.com/docs/languages/typescript>
-- [x] investigate and resolve problems
-  - NOTE: problems seem to have gone away with `npm install -g typescript`
