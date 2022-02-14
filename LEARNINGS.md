@@ -55,8 +55,11 @@ npm notice
 
 ---
 
-### 20220211
+### 20220211/20220214
 
-- [ ] figure out `vitest/ui`
-- [ ] figure out why I am not getting typescript errors
-- [ ] investigate and resolve problems
+- [x] figure out `vitest/ui`
+      `yarn test:ui --open`
+- [x] figure out why I am not getting typescript errors
+  - <https://code.visualstudio.com/docs/languages/typescript>
+- [x] investigate and resolve problems
+  - NOTE: problems seem to have gone away with `npm install -g typescript`
