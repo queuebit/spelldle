@@ -4,7 +4,9 @@
   - I signed up for the [waitlist](https://github.com/features/copilot/signup)
 - [x] prettier isn't working for typescript files
   - VSCode [settings](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#default-formatter) were set for `[javascript]` and not [all languages.
-- [ ] Tailwind intellisense isn't there for VSCode
+- [x] Tailwind intellisense isn't there for VSCode
+  - <https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss>
+  - And add this line to settings `"editor.quickSuggestions": { "strings": true }`
 
 ---
 
