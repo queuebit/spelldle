@@ -1,5 +1,10 @@
 ### 20220214
 
+- [~] setup GitHub Copilot setup to use for `getRandomWord`
+  - I signed up for the [waitlist](https://github.com/features/copilot/signup)
+- [x] prettier isn't working for typescript files
+  - VSCode [settings](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode#default-formatter) were set for `[javascript]` and not [all languages.
+
 ---
 
 ### 20220211
@@ -10,8 +15,6 @@
   - <https://code.visualstudio.com/docs/languages/typescript>
 - [x] investigate and resolve problems
   - NOTE: problems seem to have gone away with `npm install -g typescript`
-
----
 
 ### 20220210
 
