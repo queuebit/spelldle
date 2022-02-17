@@ -14,8 +14,22 @@ export enum LetterState {
 export function computeGuess(guess: string, answerString: string) {
   const result: LetterState[] = [];
 
+  if (guess.length !== answerString.length) {
+    return result;
+  }
+
   const guessArray = guess.split("");
   const answerArray = answerString.split("");
+
+  const answerLetterCount: Record<string, number> = {};
+
+  answerArray.forEach((l) => {
+    if (Object.keys(answerLetterCount).includes(l)) {
+      answerLetterCount[l]++;
+    } else {
+      answerLetterCount[l] = 1;
+    }
+  });
 
   guessArray.forEach((letter, index) => {
     if (letter == answerArray[index]) {
@@ -25,6 +39,31 @@ export function computeGuess(guess: string, answerString: string) {
     } else {
       result.push(LetterState.Miss);
     }
+  });
+
+  // TODO: this is a hand-wavey green solution
+  result.forEach((naiveResult, rIndex) => {
+    if (naiveResult !== LetterState.Present) {
+      return;
+    }
+
+    const guessLetter = guessArray[rIndex];
+
+    answerArray.forEach((answerLetter, aIndex) => {
+      if (answerLetter !== guessLetter) {
+        return;
+      }
+
+      if (result[aIndex] === LetterState.Match) {
+        result[rIndex] = LetterState.Miss;
+      }
+
+      if (answerLetterCount[guessLetter] <= 0) {
+        result[rIndex] = LetterState.Miss;
+      }
+
+      answerLetterCount[guessLetter]--;
+    });
   });
 
   return result;

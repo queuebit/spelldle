@@ -49,4 +49,28 @@ describe("computeGuess", () => {
       LetterState.Miss,
     ]);
   });
+
+  it("when 2 letters are present but answer only has one of them", () => {
+    expect(computeGuess("allol", "smelt")).toEqual([
+      LetterState.Miss,
+      LetterState.Present,
+      LetterState.Miss,
+      LetterState.Miss,
+      LetterState.Miss,
+    ]);
+  });
+
+  it("when 1 letters matches but guess has more of the same letter", () => {
+    expect(computeGuess("allol", "colon")).toEqual([
+      LetterState.Miss,
+      LetterState.Miss,
+      LetterState.Match,
+      LetterState.Match,
+      LetterState.Miss,
+    ]);
+  });
+
+  it("returns empty array when given incomplete guess", () => {
+    expect(computeGuess("hi", "helps")).toEqual([]);
+  });
 });
